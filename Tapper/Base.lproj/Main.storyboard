@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tapper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bg" translatesAutoresizingMaskIntoConstraints="NO" id="EYv-Ty-g7A">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="LZB-HV-Gca">
+                                <rect key="frame" x="135" y="20" width="331" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="331" id="vKT-vO-9fl"/>
+                                    <constraint firstAttribute="height" constant="71" id="xW6-A5-LMq"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zt5-xM-2rM" userLabel="txtfld">
+                                <rect key="frame" x="216" y="415" width="169" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQV-2f-e4I" userLabel="Coin">
+                                <rect key="frame" x="257" y="100" width="87" height="85"/>
+                                <state key="normal" image="target"/>
+                                <connections>
+                                    <action selector="tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ksd-EN-SMC"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpU-UJ-uee">
+                                <rect key="frame" x="111" y="215" width="378" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="EUN-9E-2fP"/>
+                                    <constraint firstAttribute="width" constant="378" id="c7f-QB-yyG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="57"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CL8-4e-a7O" userLabel="Playbtn">
+                                <rect key="frame" x="238" y="473" width="125" height="62"/>
+                                <state key="normal" image="playbtn"/>
+                                <connections>
+                                    <action selector="playnow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zLK-Ag-x08"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QQV-2f-e4I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0OQ-XS-DT2"/>
+                            <constraint firstItem="EYv-Ty-g7A" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="2jM-uw-84o"/>
+                            <constraint firstItem="LZB-HV-Gca" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Dg-9H-1GY"/>
+                            <constraint firstItem="LZB-HV-Gca" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="U5U-bi-kEB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EYv-Ty-g7A" secondAttribute="bottom" id="Vew-j7-u95"/>
+                            <constraint firstItem="CL8-4e-a7O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b7w-mN-mqd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EYv-Ty-g7A" secondAttribute="trailing" constant="-20" id="d4v-ZF-v0y"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CL8-4e-a7O" secondAttribute="bottom" constant="65" id="dU1-3a-Kv3"/>
+                            <constraint firstItem="vpU-UJ-uee" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hbp-1O-wT4"/>
+                            <constraint firstItem="vpU-UJ-uee" firstAttribute="top" secondItem="QQV-2f-e4I" secondAttribute="bottom" constant="30" id="oHc-eY-scV"/>
+                            <constraint firstItem="EYv-Ty-g7A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="rXF-XV-7nd"/>
+                            <constraint firstItem="CL8-4e-a7O" firstAttribute="centerX" secondItem="Zt5-xM-2rM" secondAttribute="centerX" id="sZD-jU-kdH"/>
+                            <constraint firstItem="CL8-4e-a7O" firstAttribute="top" secondItem="Zt5-xM-2rM" secondAttribute="bottom" constant="28" id="tcK-pu-oTd"/>
+                            <constraint firstItem="QQV-2f-e4I" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="100" id="xjy-0Q-9Gu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coin" destination="QQV-2f-e4I" id="kn6-gE-h5Y"/>
+                        <outlet property="logo" destination="LZB-HV-Gca" id="4il-Z9-zak"/>
+                        <outlet property="playbtn" destination="CL8-4e-a7O" id="iG2-xe-PME"/>
+                        <outlet property="taplabel" destination="vpU-UJ-uee" id="1aw-yv-FJP"/>
+                        <outlet property="txtfld" destination="Zt5-xM-2rM" id="6N1-fx-Ium"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="345"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bg" width="556" height="556"/>
+        <image name="Tapper" width="378" height="95"/>
+        <image name="playbtn" width="125" height="62"/>
+        <image name="target" width="87" height="85"/>
+    </resources>
+</document>
